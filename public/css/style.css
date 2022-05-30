@@ -74,7 +74,8 @@ h1 {
           background-color: #00ff00; }
         .container .box .body-box .container-salas label {
           margin-top: 1.3rem;
-          margin-left: 0.8rem; }
+          margin-left: 0.8rem;
+          cursor: pointer; }
     .container .box .info {
       margin-top: 0.6rem;
       opacity: 0.8; }
