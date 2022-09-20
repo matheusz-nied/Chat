@@ -1,12 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&family=Ubuntu+Mono&display=swap"
+        rel="stylesheet">
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.14.1/dist/css/uikit.min.css" />
+
+
+    <link rel="stylesheet" href="../public/css/reset.css" />
+    <link rel="stylesheet" href="../public/css/style.css" />
+
+
+    <title>Nied Chat</title>
 </head>
+
 <body>
-    
+
+
+    <div class="container">
+        <div class="box">
+
+            <div class="header-box header-chat">
+                <div class="logout-container ">
+                    <button type="button" class="logout button" id="logout">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Logout
+                    </button>
+                </div>
+            </div>
+
+            <div class="body-box">
+                <div id="username">Viserion</div>
+
+                <div id="chat_content">
+
+                    <div class="messages" id="messages"> Olá mundo</div>
+
+                </div>
+            </div>
+
+            <div class="buttons-box input-message-box">
+                <input class="form-control" type="text" placeholder="Digite sua mensagem" id="message_input" />
+
+                <button type="button" class="logout button" id="logout">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Enviar
+                    </button>
+            </div>
+
+
+
+
+
+        </div>
+
+    </div>
+
 </body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.2.0/socket.io.js"
+    integrity="sha512-WL6WGKMPBiM9PnHRYIn5YEtq0Z8XP4fkVb4qy7PP4vhmYQErJ/dySyXuFIMDf1eEYCXCrQrMJfkNwKc9gsjTjA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- <script src="/socket.io/socket.io.js"></script> -->
+<script src="chat.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.6/dayjs.min.js"
+    integrity="sha512-bwD3VD/j6ypSSnyjuaURidZksoVx3L1RPvTkleC48SbHCZsemT3VKMD39KknPnH728LLXVMTisESIBOAb5/W0Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </html>
