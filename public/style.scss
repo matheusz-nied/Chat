@@ -140,6 +140,7 @@ button {
 .container {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-left: 0.6rem;
@@ -244,10 +245,26 @@ button {
 }
 .logout-container {
 
+    
     width: 100%;
     button {
         left: 60%;
     }
+}
+
+.logout {
+    margin-bottom: 1rem;
+}
+
+.chat-content {
+    padding: .5rem;
+    display: flex;
+}
+
+.username {
+    font-size: 1.13rem;
+    text-align: center;
+    margin: .5rem;;
 }
 
 .input-message-box{

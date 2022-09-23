@@ -24,40 +24,35 @@
 
 
     <div class="container">
+        <button type="button" class="logout button" id="logout">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Logout
+        </button>
         <div class="box">
 
             <div class="header-box header-chat">
                 <div class="logout-container ">
-                    <button type="button" class="logout button" id="logout">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        Logout
-                    </button>
+                    <div id="username" class="username"></div>
+                    
                 </div>
             </div>
 
             <div class="body-box">
-                <div id="username">Viserion</div>
+                
+                <div id="chat-content" class="chat-content">
 
-                <div id="chat_content">
-
-                    <div class="messages" id="messages"> Olá mundo</div>
+                    <div class="messages" id="messages"> </div>
 
                 </div>
             </div>
 
             <div class="buttons-box input-message-box">
-                <input class="form-control" type="text" placeholder="Digite sua mensagem" id="message_input" />
+                <input class="form-control" type="text" placeholder="Digite sua mensagem" id="message-input" />
 
-                <button type="button" class="logout button" id="logout">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        Enviar
-                    </button>
+                <p class="info">Press enter to send the message</p>
             </div>
 
 
@@ -74,9 +69,9 @@
     integrity="sha512-WL6WGKMPBiM9PnHRYIn5YEtq0Z8XP4fkVb4qy7PP4vhmYQErJ/dySyXuFIMDf1eEYCXCrQrMJfkNwKc9gsjTjA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!-- <script src="/socket.io/socket.io.js"></script> -->
-<script src="chat.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.6/dayjs.min.js"
-    integrity="sha512-bwD3VD/j6ypSSnyjuaURidZksoVx3L1RPvTkleC48SbHCZsemT3VKMD39KknPnH728LLXVMTisESIBOAb5/W0Q=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+integrity="sha512-bwD3VD/j6ypSSnyjuaURidZksoVx3L1RPvTkleC48SbHCZsemT3VKMD39KknPnH728LLXVMTisESIBOAb5/W0Q=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+<script src="chat.js"></script>
 </html>
