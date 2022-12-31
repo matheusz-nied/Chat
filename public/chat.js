@@ -20,7 +20,6 @@ document
             };
 
             socket.emit("message", data);
-            createMessage(data);
             event.target.value = "";
         }
     });
