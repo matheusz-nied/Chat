@@ -8,7 +8,7 @@ const usernameDiv = document.getElementById("username");
 usernameDiv.innerHTML = `Hi <strong>${username}</strong> - Room: <strong>${room}</strong`;
 
 document
-    .getElementById("message-input")
+    .getElementById("message_input")
     .addEventListener("keypress", (event) => {
         if (event.key === "Enter") {
             const message = event.target.value;
@@ -19,24 +19,38 @@ document
                 username,
             };
 
+            socket.emit("message", data);
             createMessage(data);
             event.target.value = "";
         }
     });
-
+    socket.on("message", (data) => {
+        console.log(data)
+        createMessage(data)
+    });
+    
 function createMessage(data) {
     const messageDiv = document.getElementById("messages");
 
     messageDiv.innerHTML += `
     <div class="new_message">
       <label class="form-label">
-        <strong>${data.username}:</strong> <span>${data.message}</span>
+        <strong>${data.username}:</strong> <span>${data.text}</span>
       </label>
     </div>
     `;
 }
 
-socket.emit("select_room", {
-    username,
-    room,
-});
+socket.emit(
+    "select_room",
+    {
+        username,
+        room,
+    },
+    (messages) => {
+        messages.forEach((data) => {
+            createMessage(data);
+        });
+    }
+);
+

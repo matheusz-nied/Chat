@@ -24,13 +24,15 @@
 
 
     <div class="container">
-        <button type="button" class="logout button" id="logout">
+        <button type="button" class="logout button" id="logout" value='Voltar' onclick='history.go(-1)'>
             <span></span>
             <span></span>
             <span></span>
             <span></span>
             Logout
         </button>
+
+
         <div class="box">
 
             <div class="header-box header-chat">
@@ -50,7 +52,7 @@
             </div>
 
             <div class="buttons-box input-message-box">
-                <input class="form-control" type="text" placeholder="Digite sua mensagem" id="message-input" />
+                <input class="form-control" type="text" placeholder="Digite sua mensagem" id="message_input" />
 
                 <p class="info">Press enter to send the message</p>
             </div>
